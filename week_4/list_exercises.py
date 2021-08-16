@@ -16,3 +16,13 @@ def prints_number_data(numbers, number_of_inputs):
 
 
 prints_number_data(numbers, number_of_input)
+
+
+usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface', 'BaseStdIn', 'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer', 'bob']
+
+username = input("what is your username: ")
+
+if username in usernames:
+    print("Access granted")
+else:
+    print("Access denied")
