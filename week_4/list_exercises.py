@@ -1,4 +1,4 @@
-number_of_input = 5
+number_of_input = 5 # DONE : ASK FOR USER INPUT OF NUMBERS
 numbers = []
 
 for i in range(number_of_input):
@@ -17,6 +17,8 @@ def prints_number_data(numbers, number_of_inputs):
 
 prints_number_data(numbers, number_of_input)
 
+
+    # DONE : WOEFULLY INADEQUATE SECURITY CHECKER IMPLEMENTED
 
 usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface', 'BaseStdIn', 'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer', 'bob']
 

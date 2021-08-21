@@ -8,7 +8,7 @@ FILENAME = "subject_data.txt"
 
 def main():
     data = get_data()
-    #print(data)
+    print(data)
     display_subject_details(data)
 
 
@@ -27,10 +27,10 @@ def get_data():
         # print(parts)  # See if that worked
         unpacked_file_data.append(parts)
     input_file.close()
-    return unpacked_file_data   # DONE: Modify the function so it does this. [['CP1401', 'Ada Lovelace', 192],['CP1404', 'Alan Turing', 98]]
+    return unpacked_file_data   # DONE: MODIFY THE FUNCTION SO IT DOES THIS. [['CP1401', 'ADA LOVELACE', 192],['CP1404', 'ALAN TURING', 98]]
 
 
-def display_subject_details(data):  # DONE: Add a new function to display subject details that produces something like the following:
+def display_subject_details(data):  # DONE: ADD A NEW FUNCTION TO DISPLAY SUBJECT DETAILS THAT PRODUCES SOMETHING LIKE THE FOLLOWING:
     """displays subject deails like CP1401 is taught by Ada Lovelace and has 192 students """
     for i in range(4):
         print("{} is taught by {:<12} and has {:>3} students".format(data[i][0], data[i][1], data[i][2]))
