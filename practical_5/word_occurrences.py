@@ -13,4 +13,4 @@ for word in parts:  # DONE: FIND THE LONGEST WORD
     except KeyError:
         word_to_count[word] = 1
 
-    print("{:{}} = {:}".format(word, max(count_to_word), word_to_count[word]))  # DONE: FORMAT THE LIST
+    print("{:{}} = {}".format(word, max(count_to_word), word_to_count[word]))  # DONE: FORMAT THE LIST
