@@ -1,6 +1,4 @@
-"""
-Hexadecimal colour lookup   # DONE: CREATE A PROGRAM THAT ALLOWS YOU TO LOOK UP HEXADECIMAL COLOUR CODES.
-"""
+"""Hexadecimal colour lookup   # DONE: CREATE A PROGRAM THAT ALLOWS YOU TO LOOK UP HEXADECIMAL COLOUR CODES."""
 
 COLOUR_CODES = {"AliceBlue": "#f0f8ff", "AntiqueWhite": "#faebd7",
                 "AntiqueWhite1": "#ffefdb", "AntiqueWhite2": "#eedfcc",
@@ -11,8 +9,10 @@ COLOUR_CODES = {"AliceBlue": "#f0f8ff", "AntiqueWhite": "#faebd7",
                 "beige": "#f5f5dc", "bisque1": "#ffe4c4"}
 
 colour_code = input("colour code: ")
-while colour_code != '':  # DONE: ALLOW THE USER TO ENTER NAMES UNTIL THEY ENTER A BLANK ONE TO STOP THE LOOP.
-    try:  # DONE: ENTERING AN INVALID COLOUR NAME SHOULD NOT CRASH THE PROGRAM.
+# DONE: ALLOW THE USER TO ENTER NAMES UNTIL THEY ENTER A BLANK ONE TO STOP THE LOOP.
+while colour_code != '':
+    # DONE: ENTERING AN INVALID COLOUR NAME SHOULD NOT CRASH THE PROGRAM.
+    try:
         COLOUR_CODES[colour_code]
     except KeyError:
         print("please enter valid colour code")
