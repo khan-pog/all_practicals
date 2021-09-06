@@ -1,7 +1,8 @@
 """CP1404/CP5632 Practical - Car class example."""
 
 
-class ProgrammingLanguage:  # Done.
+# Done.
+class ProgrammingLanguage:
     """Represent a ProgramingLanguage data in class."""
 
     def __init__(self, name='', typing='', reflection=False, year=0):
@@ -18,8 +19,9 @@ class ProgrammingLanguage:  # Done.
         self.reflection = reflection
         self.year = year
 
+    # Done.
     def __str__(self):
-        """Print this string format when called."""  # Done.
+        """Print this string format when called."""
         # Done.
         return '{}, {}, Reflection={}, First appeared in {}'.format(self.name,
                                                                     self.typing,
