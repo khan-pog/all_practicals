@@ -14,8 +14,6 @@ def main():
 
     print("Files in {}:\n{}\n".format(os.getcwd(), os.listdir('.')))
 
-    os.mkdir('temp')
-
     for filename in os.listdir('.'):
 
         if os.path.isdir(filename):
@@ -27,8 +25,19 @@ def main():
 
 def get_fixed_filename(filename):
     """Return a 'fixed' version of filename."""
-    new_name = filename.replace(" ", "_").replace(".TXT", ".txt")
-    return new_name
+    step_one_format = filename.replace(" ", "_").replace(".TXT", ".txt")
+    output_name = [100]
+    for i, char in enumerate(step_one_format):
+        letters = list(step_one_format)
+        if i > 0:
+            if char.isupper() and letters[i-1].islower:
+                output_name.append('_')
+                output_name.append(char)
+            else:
+                output_name.append(char)
+        else:
+            output_name.append(char.upper())
+    return output_name
 
 
 def demo_walk():

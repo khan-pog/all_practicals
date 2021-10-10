@@ -43,8 +43,19 @@ def main():
 def get_fixed_filename(filename):
     """Return a 'fixed' version of filename."""
     new_name = filename.replace(" ", "_").replace(".TXT", ".txt")
+    output_name = [100]
+    for i, char in enumerate(new_name):
+        letters = list(new_name)
+        if i > 0:
+            if char.isupper() and letters[i-1].islower:
+                output_name.append('_')
+                output_name.append(char)
+            else:
+                output_name.append(char)
+        else:
+            output_name.append(char.upper())
+    print(output_name)
     return new_name
-
 
 def demo_walk():
     """Process all subdirectories using os.walk()."""
@@ -54,10 +65,7 @@ def demo_walk():
         print("Directory:", directory_name)
         for i, filename in enumerate(filenames):
             cucklord = os.path.join(directory_name, filename)
-            try:
-                os.rename(cucklord, os.path.join(directory_name, "FILE_" + str(i)))
-            except:
-                pass
+            os.rename(cucklord, os.path.join(directory_name, get_fixed_filename(filename)))
 
         print("\tcontains subdirectories:", subdirectories)
         print("\tand files:", filenames)
