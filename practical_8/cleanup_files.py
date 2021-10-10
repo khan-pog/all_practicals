@@ -30,7 +30,7 @@ def get_fixed_filename(filename):
     for i, char in enumerate(step_one_format):
         letters = list(step_one_format)
         if i > 0:
-            if char.isupper() and letters[i-1].islower:
+            if char.isupper() and letters[i-1].islower and not char == "_":
                 output_name.append('_')
                 output_name.append(char)
             else:
