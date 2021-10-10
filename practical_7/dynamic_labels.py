@@ -23,10 +23,10 @@ class DynamicLabelsApp(App):
         """Build the Kivy GUI."""
         self.title = "Dynamic labels"
         self.root = Builder.load_file('dynamic_labels.kv')
-        self.create_widgets()
+        self.create_lables()
         return self.root
 
-    def create_widgets(self):
+    def create_lables(self):
         """Create labels from dictionary entries and add them to the GUI."""
         for name in self.name_to_phone:
             # create a label for each data entry, specifying the text and id
